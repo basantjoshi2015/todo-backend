@@ -2,7 +2,7 @@ export default function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
 
   const { username, password } = req.body;
-
+  console.log('🪵 Login attempt:', { username, password });
   if (
     username === process.env.USERNAME &&
     password === process.env.PASSWORD
