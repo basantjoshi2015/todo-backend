@@ -3,6 +3,7 @@ export default function handler(req, res) {
 
   const { username, password } = req.body;
   console.log('🪵 Login attempt:', { username, password });
+  console.log('User name configured: ', process.env.USERNAME)
   if (
     username === process.env.USERNAME &&
     password === process.env.PASSWORD
